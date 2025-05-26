@@ -11,6 +11,15 @@ Open Ports: 53 (DNS), 80 (HTTP), 443 (HTTPS)
 
 Filtered Ports: 22 (SSH), 23 (Telnet)
 
+| Port | State    | Service | Description               |
+| ---- | -------- | ------- | ------------------------- |
+| 22   | filtered | SSH     | Remote secure shell login |
+| 23   | filtered | Telnet  | Remote login (insecure)   |
+| 53   | open     | DNS     | Domain Name System        |
+| 80   | open     | HTTP    | Unencrypted web server    |
+| 443  | open     | HTTPS   | Secure web server         |
+
+
 Risks:
 
 Telnet is insecure — should be disabled.
@@ -25,6 +34,14 @@ Likely secure or not running any services.
 
 3. 192.168.1.6 (Likely Windows PC or VM Host)
 Open Ports: 135 (MSRPC), 902 (VMware), 912 (Unknown), 3306 (MySQL)
+
+| Port | State | Service       | Description                          |
+| ---- | ----- | ------------- | ------------------------------------ |
+| 135  | open  | MSRPC         | Microsoft RPC (Windows services)     |
+| 902  | open  | VMware Server | VMware ESXi Remote Console           |
+| 912  | open  | Apex Mesh?    | Unknown; proprietary or internal use |
+| 3306 | open  | MySQL         | MySQL Database Server                |
+
 
 Risks:
 
